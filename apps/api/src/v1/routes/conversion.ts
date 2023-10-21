@@ -1,7 +1,7 @@
 import express from 'express';
 const router = express.Router();
-import { cbeConversion } from "../controllers/conversion";
+import { toBirrConversion } from "../controllers/conversion";
 
-router.get('/cbe',cbeConversion);
+router.get('/cbe',toBirrConversion);
 
 export default router;

@@ -1,7 +1,7 @@
-import { nbeScraper } from './scrapers';
+import { awashScraper, nbeScraper } from './scrapers';
 
 
-export const toEtbNbeScrape = async (amount:number): Promise<number | null> => {
+export const toEtbNbe = async (amount:number): Promise<number | null> => {
   
 const usdRate:number|null = await nbeScraper();
 if(usdRate == 0){
@@ -12,3 +12,14 @@ if(usdRate == 0){
   }
 }
 
+export const toEtbAwash = async (amount:number): Promise<number | null> => {
+  
+  const usdRate:number|null = await awashScraper();
+  if(usdRate == 0){
+      return null;
+    }else {
+      return amount / usdRate;
+    
+    }
+  }
+  

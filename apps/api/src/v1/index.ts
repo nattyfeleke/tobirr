@@ -2,6 +2,6 @@
 import  express from 'express';
 import { toBirrConversion } from './controllers/conversion';
 const router = express.Router();
-router.use('/conversion',toBirrConversion );
+router.use('/convert',toBirrConversion );
 
 export default router;
